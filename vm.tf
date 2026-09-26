@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    nutanix = {
+      source  = "nutanix/nutanix"
+      version = "2.4.3-beta1"
+    }
+  }
+}
+
 resource "nutanix_virtual_machine_v2" "window_demo" {
 
   num_cores_per_socket = 3
