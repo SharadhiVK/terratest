@@ -74,3 +74,12 @@ data "nutanix_subnets_v2" "windows_subnet" {
   filter = "name eq 'vlan20-ntx-ahv1-managed'"
   limit  = 10
 }
+
+data "nutanix_images_v2" "windows_image" {
+  filter = "name eq 'win19_svk---SCSI.0-1'"
+  limit  = 10
+}
+
+output "windows_image" {
+  value = data.nutanix_images_v2.windows_image.images
+}
