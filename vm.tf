@@ -7,6 +7,14 @@ terraform {
   }
 }
 
+provider "nutanix" {
+  username = var.nutanix_username
+  password = var.nutanix_password
+  endpoint = var.nutanix_endpoint
+  port     = 9440
+  insecure = true
+}
+
 resource "nutanix_virtual_machine_v2" "window_demo" {
 
   num_cores_per_socket = 3
