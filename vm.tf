@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+variable "nutanix_username" {}
+variable "nutanix_password" {}
+variable "nutanix_endpoint" {}
+
 provider "nutanix" {
   username = var.nutanix_username
   password = var.nutanix_password
